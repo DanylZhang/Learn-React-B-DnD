@@ -1,14 +1,44 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.tilt-root {
+    height: 150px;
+    width: 200px;
+    background-color: red;
+    background-image: -webkit-linear-gradient(315deg, #0099f7 0%, #f11712 100%);
+    background-image: linear-gradient(315deg, #0099f7 0%, #f11712 100%);
+    transform-style: preserve-3d;
+    will-change: transform;
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(20px);
+}
+
+.tilt-child {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    transform: translateZ(30px) translateX(-50%) translateY(-50%);
+    box-shadow: 0 0 50px 0 rgba(51, 51, 51, 0.3);
+}
+
+.totally-centered {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
