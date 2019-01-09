@@ -10,7 +10,6 @@ export default class Tilt extends React.Component {
             glare: true,
             'max-glare': 0.5
         });
-        console.log(this.rootNode)
     }
 
     render() {
